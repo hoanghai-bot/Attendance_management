@@ -419,7 +419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: history
+  m_Text: "Th\xF4ng tin"
 --- !u!222 &351949481
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: log out
+  m_Text: "\u0110\u0103ng xu\u1EA5t"
 --- !u!222 &1162993201
 CanvasRenderer:
   m_ObjectHideFlags: 0

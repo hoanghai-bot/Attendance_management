@@ -24,7 +24,7 @@ public class Firestoremanager : MonoBehaviour
         ListenerRegistration = db.Collection("user").Document("account").Listen(snapshot =>     //doc data
         {
             Connect connect = snapshot.ConvertTo<Connect>();                                            //lay data vao connect
-            number.text = connect.Name.ToString();                                                    //lay data number tu tren firebase
+            number.text = connect.name.ToString();                                                    //lay data number tu tren firebase
         });
     }
 
@@ -37,7 +37,7 @@ public class Firestoremanager : MonoBehaviour
     public void OnClickDown()
     {
         int beforeNumber = int.Parse(number.text);
-        Connect connect = new Connect { Name = "", account = "user1" };     //tao du lieu moi
+        Connect connect = new Connect { name = "", account = "user1" };     //tao du lieu moi
         DocumentReference numberRef = db.Collection("user").Document("account");    //dat documentReference la numberRef
         numberRef.SetAsync(connect).ContinueWithOnMainThread(task =>                        //updata = setAsync
         {

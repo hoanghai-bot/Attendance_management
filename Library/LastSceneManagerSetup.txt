@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/main/Scenes/History.unity
+- path: Assets/main/Scenes/HomeManage.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
