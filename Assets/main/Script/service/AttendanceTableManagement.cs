@@ -49,7 +49,7 @@ namespace main.Script.service
                         }
                         else
                         {
-                            clone.GetComponent<Image>().color = Color.red;
+                            clone.GetComponent<Image>().color = Color.yellow;
                         }
                     }
                 }
@@ -90,7 +90,7 @@ namespace main.Script.service
                             }
                             else
                             {
-                                clone.GetComponent<Image>().color = Color.red;
+                                clone.GetComponent<Image>().color = Color.yellow;
                             }
                         }
                     }

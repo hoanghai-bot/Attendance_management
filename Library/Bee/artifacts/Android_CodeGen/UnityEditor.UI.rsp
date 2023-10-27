@@ -134,6 +134,7 @@
 -r:"Assets/Firebase/Plugins/Firebase.Auth.dll"
 -r:"Assets/Firebase/Plugins/Firebase.Firestore.dll"
 -r:"Assets/Firebase/Plugins/Firebase.Platform.dll"
+-r:"Assets/Firebase/Plugins/Firebase.RemoteConfig.dll"
 -r:"Assets/Firebase/Plugins/Firebase.TaskExtension.dll"
 -r:"Assets/Firebase/Plugins/Google.MiniJson.dll"
 -r:"Assets/main/dll/zxing.unity.dll"
@@ -412,7 +413,7 @@
 -langversion:9.0
 
 /deterministic
-/optimize+
+/optimize-
 /debug:portable
 /nologo
 /RuntimeMetadataVersion:v4.0.30319

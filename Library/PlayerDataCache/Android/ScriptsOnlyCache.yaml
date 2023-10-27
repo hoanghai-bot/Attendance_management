@@ -9,13 +9,13 @@ ScriptsOnlyBuild:
     - main.Script.controller.ControllerSystem
     - main.Script.controller.FireBaseSignIn
     - main.Script.controller.FireBaseSignUp
+    - main.Script.service.AttendanceTableManagement
     - main.Script.service.ButtonFind
     - main.Script.service.CalendarManagement
     - main.Script.service.ClickPanel
     - main.Script.service.InformationManagement
     - main.Script.service.ReadQRCode
     - main.Script.service.SceneSwitcher
-    - main.Script.service.TableManagement
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Animation.Editor.dll:
@@ -52,9 +52,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -68,6 +65,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
@@ -77,6 +75,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
@@ -336,7 +335,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23956}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -389,7 +388,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -456,7 +455,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23866}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -493,6 +492,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16694}
     - Class: 114
+      Script: {instanceID: 17594}
+    - Class: 114
       Script: {instanceID: 17956}
     - Class: 114
       Script: {instanceID: 18216}
@@ -507,9 +508,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21868}
     - Class: 114
+      Script: {instanceID: 21996}
+    - Class: 114
       Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -560,7 +563,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -609,7 +612,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22492}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -676,7 +679,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23956}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -747,7 +750,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23034}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -806,7 +809,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 23034}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 24674}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1146,7 +1149,7 @@ ScriptsOnlyBuild:
     className: Bone
   - hash:
       serializedVersion: 2
-      Hash: 006fb723288bb70655fa99d1089b716c
+      Hash: 942f5177444d09472edd7ad854f1b4c7
     assemblyName: Assembly-CSharp
     namespaceName: main.Script.service
     className: ReadQRCode
@@ -1665,7 +1668,7 @@ ScriptsOnlyBuild:
       Hash: ef4646995f96e703ae23fce915aee911
     assemblyName: Assembly-CSharp
     namespaceName: main.Script.service
-    className: TableManagement
+    className: AttendanceTableManagement
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -2008,6 +2011,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteLibraryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: ef4646995f96e703ae23fce915aee911
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WorkdayManagement
   - hash:
       serializedVersion: 2
       Hash: 3324a70611b197df9927d1019ae24ce4

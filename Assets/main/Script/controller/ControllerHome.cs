@@ -56,12 +56,12 @@ namespace main.Script.controller
                             || temp.TimeOfDay >new TimeSpan(13,0,0) && temp.TimeOfDay <  new TimeSpan(16,0,0))
                         {
                             check = "check in";
-                            ChangeText(check);
+                            ChangeText(check,temp);
                         }
                         else
                         {
                             check = "chech out";
-                            ChangeText(check);
+                            ChangeText(check,temp);
                         }
 
                         if (check == PlayerPrefs.GetString("check"))
@@ -118,9 +118,9 @@ namespace main.Script.controller
             return lastPart;
         }
 
-        private void ChangeText(string check)
+        private void ChangeText(string check ,DateTime temp)
         {
-            successText.text = check + "\nthành công";
+            successText.text = check + " thành công\n"+ temp.ToString("hh:mm:ss");
             repeatText.text = "Bạn đã " + check + "\ntrước đấy";
         }
     }

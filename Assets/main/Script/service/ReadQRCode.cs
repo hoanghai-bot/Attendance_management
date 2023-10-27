@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Firebase.Firestore;
 using main.Script.controller;
 using UnityEngine;
+using UnityEngine.UI;
 using ZXing;
 
 namespace main.Script.service
@@ -13,8 +14,11 @@ namespace main.Script.service
         public bool scanning = true;
         public WebCamTexture camTexture;
         private Rect screenRect;
+        public RawImage rawImage;
+        
         void Start()
         {
+            RequestCameraPermission();
             screenRect = new Rect(0, 0, Screen.width, Screen.height);
             camTexture = new WebCamTexture();
             camTexture.requestedHeight = Screen.height;
@@ -22,13 +26,15 @@ namespace main.Script.service
             if (camTexture != null)
             {
                 camTexture.Play();
+                rawImage.texture = camTexture;
+                rawImage.GetComponent<AspectRatioFitter>().aspectRatio = (float)camTexture.height / camTexture.width;
             }
         }
         
         void OnGUI()
         {
             // Vẽ một camera trên màn hình
-            GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
+            //GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
             // Đọc nội dung trên màn hình.
             try
             {
@@ -56,5 +62,13 @@ namespace main.Script.service
             camTexture.Stop();
         }
         
+        public void RequestCameraPermission()
+        {
+            Debug.Log("checkPermission");
+            if (!Application.HasUserAuthorization(UserAuthorization.WebCam))
+            {
+                Application.RequestUserAuthorization(UserAuthorization.WebCam);
+            }
+        }
     }
 }

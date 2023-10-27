@@ -1,0 +1,149 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.unity3d.player" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="23"
+7-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
+8        android:targetSdkVersion="33" />
+8-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
+9
+10    <uses-permission android:name="android.permission.INTERNET" />
+10-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:3-65
+10-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:3:20-62
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:3-63
+11-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:20-60
+12
+13    <uses-feature android:glEsVersion="0x00030000" />
+13-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:3-52
+13-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:5:17-49
+14    <uses-feature
+14-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:3-91
+15        android:name="android.hardware.vulkan.version"
+15-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:17-63
+16        android:required="false" />
+16-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:6:64-88
+17    <uses-feature
+17-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:3-83
+18        android:name="android.hardware.camera"
+18-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:17-55
+19        android:required="false" />
+19-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:7:56-80
+20    <uses-feature
+20-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:3-93
+21        android:name="android.hardware.camera.autofocus"
+21-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:17-65
+22        android:required="false" />
+22-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:8:66-90
+23    <uses-feature
+23-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:3-89
+24        android:name="android.hardware.camera.front"
+24-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:17-61
+25        android:required="false" />
+25-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:9:62-86
+26    <uses-feature
+26-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:3-88
+27        android:name="android.hardware.touchscreen"
+27-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:17-60
+28        android:required="false" />
+28-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:10:61-85
+29    <uses-feature
+29-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:3-99
+30        android:name="android.hardware.touchscreen.multitouch"
+30-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:17-71
+31        android:required="false" />
+31-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:11:72-96
+32    <uses-feature
+32-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:3-108
+33        android:name="android.hardware.touchscreen.multitouch.distinct"
+33-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:17-80
+34        android:required="false" />
+34-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:12:81-105
+35
+36    <application android:extractNativeLibs="true" >
+36-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:3-28:17
+36-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:13:16-48
+37        <meta-data
+37-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:5-69
+38            android:name="unity.splash-mode"
+38-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:16-48
+39            android:value="0" />
+39-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:14:49-66
+40        <meta-data
+40-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:5-74
+41            android:name="unity.splash-enable"
+41-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:16-50
+42            android:value="True" />
+42-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:15:51-71
+43        <meta-data
+43-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:5-78
+44            android:name="unity.launch-fullscreen"
+44-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:16-54
+45            android:value="True" />
+45-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:16:55-75
+46        <meta-data
+46-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:5-84
+47            android:name="unity.allow-resizable-window"
+47-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:16-59
+48            android:value="False" />
+48-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:17:60-81
+49        <meta-data
+49-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:5-81
+50            android:name="notch.config"
+50-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:16-43
+51            android:value="portrait|landscape" />
+51-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:18:44-78
+52        <meta-data
+52-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:5-84
+53            android:name="unity.auto-report-fully-drawn"
+53-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:16-60
+54            android:value="true" />
+54-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:61-81
+55
+56        <activity
+56-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:5-27:16
+57            android:name="com.unity3d.player.UnityPlayerActivity"
+57-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:15-68
+58            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+58-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:180-361
+59            android:exported="true"
+59-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:433-456
+60            android:hardwareAccelerated="false"
+60-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:397-432
+61            android:launchMode="singleTask"
+61-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:148-179
+62            android:resizeableActivity="false"
+62-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:362-396
+63            android:screenOrientation="fullUser"
+63-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:111-147
+64            android:theme="@style/UnityThemeSelector" >
+64-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:69-110
+65            <intent-filter>
+65-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:7-24:23
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:9-69
+66-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:19-66
+67
+68                <action android:name="android.intent.action.MAIN" />
+68-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:9-61
+68-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:17-58
+69            </intent-filter>
+70
+71            <meta-data
+71-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:25:7-82
+72                android:name="unityplayer.UnityActivity"
+72-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:25:18-58
+73                android:value="true" />
+73-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:25:59-79
+74            <meta-data
+74-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:26:7-70
+75                android:name="notch_support"
+75-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:26:18-46
+76                android:value="true" />
+76-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:26:47-67
+77        </activity>
+78    </application>
+79
+80</manifest>

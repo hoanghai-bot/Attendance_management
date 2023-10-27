@@ -11,6 +11,7 @@ namespace main.Script.service
             if (reset)
             {
                 PlayerPrefs.SetString("id","");
+                PlayerPrefs.SetString("check","");
             }
             SceneManager.LoadScene(sceneName);
         }

@@ -1,0 +1,360 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.DefaultCompany.Attendancemanagement"
+4    android:installLocation="preferExternal"
+5    android:versionCode="1"
+6    android:versionName="1.0" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="23"
+9-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="33" />
+10-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
+11
+12    <supports-screens
+12-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-163
+13        android:anyDensity="true"
+13-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:135-160
+14        android:largeScreens="true"
+14-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:78-105
+15        android:normalScreens="true"
+15-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-77
+16        android:smallScreens="true"
+16-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:21-48
+17        android:xlargeScreens="true" />
+17-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:106-134
+18
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-67
+19-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-64
+20    <uses-permission android:name="android.permission.CAMERA" />
+20-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-65
+20-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-62
+21
+22    <uses-feature android:glEsVersion="0x00030000" />
+22-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-54
+22-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:19-51
+23    <uses-feature
+23-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-16:36
+24        android:name="android.hardware.vulkan.version"
+24-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:9-55
+25        android:required="false" />
+25-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
+26    <uses-feature
+26-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-19:36
+27        android:name="android.hardware.camera"
+27-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-47
+28        android:required="false" />
+28-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-33
+29    <uses-feature
+29-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-22:36
+30        android:name="android.hardware.camera.autofocus"
+30-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:9-57
+31        android:required="false" />
+31-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-33
+32    <uses-feature
+32-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:5-25:36
+33        android:name="android.hardware.camera.front"
+33-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:9-53
+34        android:required="false" />
+34-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-33
+35    <uses-feature
+35-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:5-28:36
+36        android:name="android.hardware.touchscreen"
+36-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:9-52
+37        android:required="false" />
+37-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-33
+38    <uses-feature
+38-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:5-31:36
+39        android:name="android.hardware.touchscreen.multitouch"
+39-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:9-63
+40        android:required="false" />
+40-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:9-33
+41    <uses-feature
+41-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:5-34:36
+42        android:name="android.hardware.touchscreen.multitouch.distinct"
+42-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:9-72
+43        android:required="false" />
+43-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-33
+44
+45    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+45-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:26:5-79
+45-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:26:22-76
+46    <uses-permission android:name="android.permission.WAKE_LOCK" />
+46-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:25:5-68
+46-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:25:22-65
+47    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Include required permissions for Advertising Id -->
+47-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:26:5-110
+47-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:26:22-107
+48    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+48-->[:com.google.android.gms.play-services-ads-identifier-18.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\850a7a0cbd1d64015ab09966dca93a3b\transformed\com.google.android.gms.play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:5-79
+48-->[:com.google.android.gms.play-services-ads-identifier-18.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\850a7a0cbd1d64015ab09966dca93a3b\transformed\com.google.android.gms.play-services-ads-identifier-18.0.0\AndroidManifest.xml:23:22-76
+49
+50    <application
+50-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:3-83
+51        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+51-->[:androidx.core.core-1.2.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\201eb74e81184db3885d54050df243b6\transformed\androidx.core.core-1.2.0\AndroidManifest.xml:24:18-86
+52        android:debuggable="true"
+53        android:extractNativeLibs="true"
+53-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:18-50
+54        android:icon="@mipmap/app_icon"
+54-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:49-80
+55        android:label="@string/app_name" >
+55-->D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:3:16-48
+56        <meta-data
+56-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:33
+57            android:name="unity.splash-mode"
+57-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-45
+58            android:value="0" />
+58-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-30
+59        <meta-data
+59-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:36
+60            android:name="unity.splash-enable"
+60-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-47
+61            android:value="True" />
+61-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-33
+62        <meta-data
+62-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-45:36
+63            android:name="unity.launch-fullscreen"
+63-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-51
+64            android:value="True" />
+64-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-33
+65        <meta-data
+65-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:46:9-48:37
+66            android:name="unity.allow-resizable-window"
+66-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-56
+67            android:value="False" />
+67-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:48:13-34
+68        <meta-data
+68-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:49:9-51:50
+69            android:name="notch.config"
+69-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:50:13-40
+70            android:value="portrait|landscape" />
+70-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:51:13-47
+71        <meta-data
+71-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:52:9-54:36
+72            android:name="unity.auto-report-fully-drawn"
+72-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:53:13-57
+73            android:value="true" />
+73-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:54:13-33
+74
+75        <activity
+75-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:56:9-77:20
+76            android:name="com.unity3d.player.UnityPlayerActivity"
+76-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:57:13-66
+77            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+77-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:58:13-194
+78            android:exported="true"
+78-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:59:13-36
+79            android:hardwareAccelerated="false"
+79-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:60:13-48
+80            android:launchMode="singleTask"
+80-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:61:13-44
+81            android:resizeableActivity="false"
+81-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:62:13-47
+82            android:screenOrientation="fullUser"
+82-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:63:13-49
+83            android:theme="@style/UnityThemeSelector" >
+83-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:64:13-54
+84            <intent-filter>
+84-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:65:13-69:29
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:66:17-77
+85-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:66:27-74
+86
+87                <action android:name="android.intent.action.MAIN" />
+87-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:68:17-69
+87-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:68:25-66
+88            </intent-filter>
+89
+90            <meta-data
+90-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:71:13-73:40
+91                android:name="unityplayer.UnityActivity"
+91-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:72:17-57
+92                android:value="true" />
+92-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:73:17-37
+93            <meta-data
+93-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:74:13-76:40
+94                android:name="notch_support"
+94-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:75:17-45
+95                android:value="true" />
+95-->[:unityLibrary] D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\merged_manifest\debug\AndroidManifest.xml:76:17-37
+96        </activity>
+97
+98        <provider
+98-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:5-245
+99            android:name="com.google.firebase.provider.FirebaseInitProvider"
+99-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:15-79
+100            android:authorities="com.DefaultCompany.Attendancemanagement.firebaseinitprovider"
+100-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:80-162
+101            android:directBootAware="true"
+101-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:163-193
+102            android:exported="false"
+102-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:194-218
+103            android:initOrder="100" />
+103-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:20:219-242
+104
+105        <service
+105-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:21:5-164
+106            android:name="com.google.firebase.components.ComponentDiscoveryService"
+106-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:21:14-85
+107            android:directBootAware="true"
+107-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:21:86-116
+108            android:exported="false" >
+108-->[:com.google.firebase.firebase-common-20.3.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\984d88ebfee9d45dfb945ea84a78e6b0\transformed\com.google.firebase.firebase-common-20.3.2\AndroidManifest.xml:21:117-141
+109            <meta-data
+109-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:69:13-71:85
+110                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+110-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:70:17-109
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:71:17-82
+112            <meta-data
+112-->[:com.google.firebase.firebase-installations-17.0.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\391c9a7877d07243f06270aee1699197\transformed\com.google.firebase.firebase-installations-17.0.1\AndroidManifest.xml:18:13-20:85
+113                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+113-->[:com.google.firebase.firebase-installations-17.0.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\391c9a7877d07243f06270aee1699197\transformed\com.google.firebase.firebase-installations-17.0.1\AndroidManifest.xml:19:17-127
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[:com.google.firebase.firebase-installations-17.0.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\391c9a7877d07243f06270aee1699197\transformed\com.google.firebase.firebase-installations-17.0.1\AndroidManifest.xml:20:17-82
+115            <meta-data
+115-->[:com.google.firebase.firebase-config-21.4.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\703021666c3de400f5492d64873ff6c8\transformed\com.google.firebase.firebase-config-21.4.0\AndroidManifest.xml:31:13-33:85
+116                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+116-->[:com.google.firebase.firebase-config-21.4.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\703021666c3de400f5492d64873ff6c8\transformed\com.google.firebase.firebase-config-21.4.0\AndroidManifest.xml:32:17-117
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[:com.google.firebase.firebase-config-21.4.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\703021666c3de400f5492d64873ff6c8\transformed\com.google.firebase.firebase-config-21.4.0\AndroidManifest.xml:33:17-82
+118            <meta-data
+118-->[:com.google.android.gms.play-services-measurement-api-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\720588c7812a9def491b33d7a07ffab6\transformed\com.google.android.gms.play-services-measurement-api-21.2.2\AndroidManifest.xml:31:13-33:85
+119                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+119-->[:com.google.android.gms.play-services-measurement-api-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\720588c7812a9def491b33d7a07ffab6\transformed\com.google.android.gms.play-services-measurement-api-21.2.2\AndroidManifest.xml:32:17-139
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[:com.google.android.gms.play-services-measurement-api-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\720588c7812a9def491b33d7a07ffab6\transformed\com.google.android.gms.play-services-measurement-api-21.2.2\AndroidManifest.xml:33:17-82
+121            <meta-data
+121-->[:com.google.firebase.firebase-firestore-24.6.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\479e1b1b1d6085b91b862d20fc2608e1\transformed\com.google.firebase.firebase-firestore-24.6.0\AndroidManifest.xml:19:13-21:85
+122                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+122-->[:com.google.firebase.firebase-firestore-24.6.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\479e1b1b1d6085b91b862d20fc2608e1\transformed\com.google.firebase.firebase-firestore-24.6.0\AndroidManifest.xml:20:17-111
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[:com.google.firebase.firebase-firestore-24.6.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\479e1b1b1d6085b91b862d20fc2608e1\transformed\com.google.firebase.firebase-firestore-24.6.0\AndroidManifest.xml:21:17-82
+124            <meta-data
+124-->[:com.google.firebase.firebase-abt-21.1.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\f565914197e465343a70e553e73e8b03\transformed\com.google.firebase.firebase-abt-21.1.1\AndroidManifest.xml:12:13-14:85
+125                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+125-->[:com.google.firebase.firebase-abt-21.1.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\f565914197e465343a70e553e73e8b03\transformed\com.google.firebase.firebase-abt-21.1.1\AndroidManifest.xml:13:17-109
+126                android:value="com.google.firebase.components.ComponentRegistrar" />
+126-->[:com.google.firebase.firebase-abt-21.1.1:] C:\Users\Thinkpro\.gradle\caches\transforms-3\f565914197e465343a70e553e73e8b03\transformed\com.google.firebase.firebase-abt-21.1.1\AndroidManifest.xml:14:17-82
+127        </service>
+128
+129        <activity
+129-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:29:9-46:20
+130            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+130-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:30:13-80
+131            android:excludeFromRecents="true"
+131-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:31:13-46
+132            android:exported="true"
+132-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:32:13-36
+133            android:launchMode="singleTask"
+133-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:33:13-44
+134            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+134-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:34:13-72
+135            <intent-filter>
+135-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:35:13-45:29
+136                <action android:name="android.intent.action.VIEW" />
+136-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:36:17-69
+136-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:36:25-66
+137
+138                <category android:name="android.intent.category.DEFAULT" />
+138-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:38:17-76
+138-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:38:27-73
+139                <category android:name="android.intent.category.BROWSABLE" />
+139-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:39:17-78
+139-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:39:27-75
+140
+141                <data
+141-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:41:17-44:51
+142                    android:host="firebase.auth"
+142-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:42:21-49
+143                    android:path="/"
+143-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:43:21-37
+144                    android:scheme="genericidp" />
+144-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:44:21-48
+145            </intent-filter>
+146        </activity>
+147        <activity
+147-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:47:9-64:20
+148            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+148-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:48:13-79
+149            android:excludeFromRecents="true"
+149-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:49:13-46
+150            android:exported="true"
+150-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:50:13-36
+151            android:launchMode="singleTask"
+151-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:51:13-44
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+152-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:52:13-72
+153            <intent-filter>
+153-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:53:13-63:29
+154                <action android:name="android.intent.action.VIEW" />
+154-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:36:17-69
+154-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:36:25-66
+155
+156                <category android:name="android.intent.category.DEFAULT" />
+156-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:38:17-76
+156-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:38:27-73
+157                <category android:name="android.intent.category.BROWSABLE" />
+157-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:39:17-78
+157-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:39:27-75
+158
+159                <data
+159-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:41:17-44:51
+160                    android:host="firebase.auth"
+160-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:42:21-49
+161                    android:path="/"
+161-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:43:21-37
+162                    android:scheme="recaptcha" />
+162-->[:com.google.firebase.firebase-auth-22.0.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b1f669e4fbaef192c7d01a0164c5fe0f\transformed\com.google.firebase.firebase-auth-22.0.0\AndroidManifest.xml:44:21-48
+163            </intent-filter>
+164        </activity>
+165
+166        <receiver
+166-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:29:9-33:20
+167            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+167-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:30:13-85
+168            android:enabled="true"
+168-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:31:13-35
+169            android:exported="false" >
+169-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:32:13-37
+170        </receiver>
+171
+172        <service
+172-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:35:9-38:40
+173            android:name="com.google.android.gms.measurement.AppMeasurementService"
+173-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:36:13-84
+174            android:enabled="true"
+174-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:37:13-35
+175            android:exported="false" />
+175-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:38:13-37
+176        <service
+176-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:39:9-43:72
+177            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+177-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:40:13-87
+178            android:enabled="true"
+178-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:41:13-35
+179            android:exported="false"
+179-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:42:13-37
+180            android:permission="android.permission.BIND_JOB_SERVICE" />
+180-->[:com.google.android.gms.play-services-measurement-21.2.2:] C:\Users\Thinkpro\.gradle\caches\transforms-3\643e15765ce34d00eda61905fcdd4615\transformed\com.google.android.gms.play-services-measurement-21.2.2\AndroidManifest.xml:43:13-69
+181
+182        <activity
+182-->[:com.google.android.gms.play-services-base-18.2.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b4d8c1e589e59a423daa5fe9d2c93ef1\transformed\com.google.android.gms.play-services-base-18.2.0\AndroidManifest.xml:20:9-22:45
+183            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+183-->[:com.google.android.gms.play-services-base-18.2.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b4d8c1e589e59a423daa5fe9d2c93ef1\transformed\com.google.android.gms.play-services-base-18.2.0\AndroidManifest.xml:20:19-85
+184            android:exported="false"
+184-->[:com.google.android.gms.play-services-base-18.2.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b4d8c1e589e59a423daa5fe9d2c93ef1\transformed\com.google.android.gms.play-services-base-18.2.0\AndroidManifest.xml:22:19-43
+185            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+185-->[:com.google.android.gms.play-services-base-18.2.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\b4d8c1e589e59a423daa5fe9d2c93ef1\transformed\com.google.android.gms.play-services-base-18.2.0\AndroidManifest.xml:21:19-78
+186
+187        <meta-data
+187-->[:com.google.android.gms.play-services-basement-18.1.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\a14c828f9d7b4523071c87ad1e25cf2e\transformed\com.google.android.gms.play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+188            android:name="com.google.android.gms.version"
+188-->[:com.google.android.gms.play-services-basement-18.1.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\a14c828f9d7b4523071c87ad1e25cf2e\transformed\com.google.android.gms.play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+189            android:value="@integer/google_play_services_version" />
+189-->[:com.google.android.gms.play-services-basement-18.1.0:] C:\Users\Thinkpro\.gradle\caches\transforms-3\a14c828f9d7b4523071c87ad1e25cf2e\transformed\com.google.android.gms.play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+190    </application>
+191
+192</manifest>
