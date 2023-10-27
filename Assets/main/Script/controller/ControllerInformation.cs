@@ -22,12 +22,13 @@ namespace main.Script.controller
         public GameObject confirmError;
         public GameObject accError;
         public GameObject priError;
-
+        public GameObject success;
+        
         void Start()
         {
             base.Start();
             InformationUser(PlayerPrefs.GetString("id"));
-            
+            id = PlayerPrefs.GetString("id");
         }
 
         public async void ChangeUser()
@@ -74,6 +75,7 @@ namespace main.Script.controller
                     InformationUser(id);
                     //FindObjectOfType<ButtonFind>().DrawFind();
                     Debug.Log("success");
+                    success.SetActive(true);
                 }
 
             }
@@ -86,7 +88,7 @@ namespace main.Script.controller
 
         private async void InformationUser(string id)
         {
-            DocumentReference doc = db.Collection("user").Document(id);
+            DocumentReference doc = db.Collection("User").Document(id);
             DocumentSnapshot snapshot = await doc.GetSnapshotAsync();
 
             Connect connect = snapshot.ConvertTo<Connect>();
@@ -116,7 +118,7 @@ namespace main.Script.controller
 
         public async void ClickFindName(Text temp)
         {
-            Query query = db.Collection("user");
+            Query query = db.Collection("User");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {

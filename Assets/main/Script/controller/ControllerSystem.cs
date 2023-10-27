@@ -1,24 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using main.Script.controller;
 using UnityEngine;
 
-public class ControllerSystem : FireBaseCommon
+namespace main.Script.controller
 {
-    public GameObject button;
-    // Start is called before the first frame update
-    async void Start()
+    public class ControllerSystem : FireBaseCommon
     {
-        base.Start();
-        if (await CheckPermission("system"))
+        public GameObject button;
+        // Start is called before the first frame update
+        async void Start()
         {
-            button.SetActive(true);
+            base.Start();
+            if (await CheckPermission("system"))
+            {
+                button.SetActive(true);
+            }
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Update is called once per frame
+        void Update()
+        {
+            
+        }
     }
 }

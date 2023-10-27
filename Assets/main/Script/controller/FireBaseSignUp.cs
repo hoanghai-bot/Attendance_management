@@ -93,35 +93,5 @@ namespace main.Script.controller
             }
         
         }
-
-
-
-        // public async void updateId()
-        // {
-        //     DocumentReference docref = db.Collection("user").Document("lastID");
-        //     Dictionary<string, object> data = new Dictionary<string, object>()
-        //     {
-        //         { "id", id + 1 }
-        //     };
-        //
-        //     DocumentSnapshot snapshot = await docref.GetSnapshotAsync();
-        //     if (snapshot.Exists)
-        //     {
-        //         await docref.SetAsync(data);
-        //     }
-        // }
-
-        // public async void GetID()
-        // {
-        //     DocumentReference docref = db.Collection("user").Document("lastID");
-        //     DocumentSnapshot snapshot = await docref.GetSnapshotAsync();
-        //     Connect connect = snapshot.ConvertTo<Connect>();
-        //
-        //     if (snapshot.Exists)
-        //     {
-        //          id = connect.id;
-        //     }
-        //    
-        // }
     }
 }

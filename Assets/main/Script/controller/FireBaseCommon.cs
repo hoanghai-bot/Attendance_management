@@ -15,6 +15,11 @@ namespace main.Script.controller
         protected FirebaseFirestore db;
         protected void Start()
         {
+            Screen.autorotateToPortrait = false; // Không cho phép xoay màn hình dọc
+            Screen.autorotateToPortraitUpsideDown = false; // Không cho phép xoay màn hình dọc ngược
+            Screen.orientation = ScreenOrientation.Portrait; // Cố định màn hình ở chế độ dọc
+
+            
             db = FirebaseFirestore.DefaultInstance;
             IDAcc = PlayerPrefs.GetString("id");
             Debug.Log(PlayerPrefs.GetString("id"));
@@ -29,7 +34,7 @@ namespace main.Script.controller
 
         // protected async void ConnertToId(string id, Connect connect)
         // {
-        //     DocumentReference doc = db.Collection("user").Document(id);
+        //     DocumentReference doc = db.Collection("User").Document(id);
         //     DocumentSnapshot docsnap =await doc.GetSnapshotAsync();
         //     connect = docsnap.ConvertTo<Connect>();
         // }
@@ -39,7 +44,8 @@ namespace main.Script.controller
             bool result = false;
             if (PlayerPrefs.GetString("id")!="")
             {
-                DocumentReference doc = db.Collection("user").Document(id);
+                DocumentReference doc = db.Collection("User")
+                    .Document(id);
                 DocumentSnapshot docsnap =await doc.GetSnapshotAsync();
                 Connect connect = docsnap.ConvertTo<Connect>();
                 // Connect connect = default;
@@ -50,7 +56,7 @@ namespace main.Script.controller
                 }
             }
         
-            Query qref = db.Collection("user");
+            Query qref = db.Collection("User");
             QuerySnapshot snapshot = await qref.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {
@@ -71,7 +77,8 @@ namespace main.Script.controller
         protected async Task<bool> ChenkPassword(string pass,string id)
         {
             bool result = false;
-            DocumentReference doc = db.Collection("user").Document(id);
+            DocumentReference doc = db.Collection("User")
+                .Document(id);
             DocumentSnapshot snapshot = await doc.GetSnapshotAsync();
         
             Connect connect = snapshot.ConvertTo<Connect>();
@@ -89,7 +96,7 @@ namespace main.Script.controller
     
         protected void NewUser( string dt, string pass, string name, string address, string bith)
         {
-            CollectionReference collection = db.Collection("user");
+            CollectionReference collection = db.Collection("User");
             Dictionary<string, object> data = new Dictionary<string, object>()
             {
                 {"device",GetDeviceName()},
@@ -105,7 +112,8 @@ namespace main.Script.controller
         
         protected void UpdateUser( string dt, string pass, string name, string address, string bith,string mission, string id)
         {
-            DocumentReference collection = db.Collection("user").Document(id);
+            DocumentReference collection = db.Collection("User")
+                .Document(id);
             Dictionary<string, object> data = new Dictionary<string, object>()
             {
                 { "account", dt },
@@ -132,7 +140,7 @@ namespace main.Script.controller
 
             return deviceName;
         }
-        string GetDeviceIPAddress()
+        protected string GetDeviceIPAddress()
         {
             string ipAddress = "N/A";
             try
@@ -159,45 +167,37 @@ namespace main.Script.controller
             return ipAddress;
         }
 
-        public async void ScanUpdateCheckTime()
+        public async void ScanUpdateCheckTime(DateTime temp, string check)
         {
             
-            string check;
-            if (time.ToString("tt") == "AM" && time.TimeOfDay < new TimeSpan(8,30,0)
-                || time.ToString("tt") == "PM" && time.TimeOfDay <  new TimeSpan(1,30,0))
-            {
-                check = "check in";
-            }
-            else
-            {
-                check = "chech out";
-            }
-            Debug.Log(PlayerPrefs.GetString("id"));
-            DocumentReference doc = db.Collection("user").Document(PlayerPrefs.GetString("id"));
+            
+            
+            DocumentReference doc = db.Collection("User")
+                .Document(PlayerPrefs.GetString("id"));
             DocumentSnapshot snapshot = await doc.GetSnapshotAsync();
             Connect connect = snapshot.ConvertTo<Connect>();
             
-            CollectionReference query = db.Collection("attendance data").Document(time.ToString("MM-yyyy")).Collection(time.Day.ToString());
+            CollectionReference query = db.Collection("Attendance")
+                .Document(time.ToString("MM-yyyy"))
+                .Collection("data");
             Dictionary<string, object> data = new Dictionary<string, object>()
             {
-                { "timecheck", time },
+                { "timecheck", temp },
                 {"name",connect.name},
                 {"phone", connect.account},
                 {"id",PlayerPrefs.GetString("id")},
-                {"time",time.ToString("dd/MM/yyyy")},
+                {"time",temp.ToString("dd/MM/yyyy")},
                 {"network",GetDeviceIPAddress()},
                 {"device",GetDeviceName()},
                 {"check",check}
             };
             await query.AddAsync(data);
-
-            
         }
 
         protected async Task<bool> CheckPermission(string temp)
         {
             bool result = false;
-            DocumentReference doc = db.Collection("user").Document(IDAcc);
+            DocumentReference doc = db.Collection("User").Document(IDAcc);
             DocumentSnapshot snapshot = await doc.GetSnapshotAsync();
             Connect connect = snapshot.ConvertTo<Connect>();
 
@@ -210,7 +210,7 @@ namespace main.Script.controller
     
         // public async void ScanUpdateCheckOut()
         // {
-        //     CollectionReference query = db.Collection("attendance data").Document(time.Year+"/"+time.Month).Collection(time.Day.ToString());
+        //     CollectionReference query = db.Collection("Attendance").Document(time.Year+"/"+time.Month).Collection(time.Day.ToString());
         //     Dictionary<string, object> data = new Dictionary<string, object>()
         //     {
         //         { "checkout", time }

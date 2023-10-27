@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Net;
 using Firebase.Firestore;
 using UnityEngine;
@@ -10,13 +11,16 @@ namespace main.Script.service
     {
         public GameObject prefab;
         
-        string networkAddress = "192.168.1.0";  // Địa chỉ mạng
-        string netmask = "255.255.255.0";
         
         public async void SeachInformation(string day,int month,int year, FirebaseFirestore db)
         {
             DelInformation();
-            Query query = db.Collection("attendance data").Document(month + "-" + year).Collection(day);
+            string document = month + "-" + year;
+            
+            Query query = db.Collection("Attendance")
+                .Document(document)
+                .Collection("data")
+                .OrderBy("timecheck");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {
@@ -28,20 +32,17 @@ namespace main.Script.service
                         var clone = Instantiate(prefab, transform);
                         clone.SetActive(true);
                         string net;
-                        if (IsIPInNetwork(connect.network,networkAddress,netmask))
-                        {
-                            net = "PUTOEDU";
-                        }
-                        else
-                        {
-                            net = "không rõ";
-                        }
+                       
 
-                        clone.GetComponentInChildren<Text>().text =
+                        var temp = FindObjectsOfType<Button>()
+                            .Where(x => x.GetComponentInChildren<Text>().text == connect.timecheck.ToString("dd"))
+                            .ToList().First();
+                        temp.image.color = Color.green;
+
+                                clone.GetComponentInChildren<Text>().text =
                             connect.check+ "\n" +
-                            "thời gian: " + ChangeTime(connect.timecheck) + "\n" +
-                            "mạng : " + net;
-
+                            "thời gian: " + ChangeTime(connect.timecheck) ;
+                        
                     }
                 }
             }
@@ -59,15 +60,6 @@ namespace main.Script.service
             return formattedTimeVietnam;
         }
         
-        static bool IsIPInNetwork(string ipAddress, string networkAddress, string netmask)
-        {
-            IPAddress ip = IPAddress.Parse(ipAddress);
-            IPAddress network = IPAddress.Parse(networkAddress);
-            IPAddress mask = IPAddress.Parse(netmask);
-
-            // Thực hiện phép AND giữa địa chỉ IP và netmask, sau đó so sánh với địa chỉ mạng
-            return (ip.Address & mask.Address) == network.Address;
-        }
         private void DelInformation()
         {
             foreach (Transform i in transform)

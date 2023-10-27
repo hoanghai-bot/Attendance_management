@@ -9,41 +9,52 @@ namespace main.Script.service
 {
     public class ReadQRCode : MonoBehaviour
     {
-        private WebCamTexture webCamTexture;
+
+        public bool scanning = true;
+        public WebCamTexture camTexture;
         private Rect screenRect;
         void Start()
         {
             screenRect = new Rect(0, 0, Screen.width, Screen.height);
-            webCamTexture = new WebCamTexture();
-            webCamTexture.requestedHeight = Screen.height;
-            webCamTexture.requestedWidth = Screen.width;
-            if (webCamTexture != null)
+            camTexture = new WebCamTexture();
+            camTexture.requestedHeight = Screen.height;
+            camTexture.requestedWidth = Screen.width;
+            if (camTexture != null)
             {
-                webCamTexture.Play();
+                camTexture.Play();
             }
         }
-
+        
         void OnGUI()
         {
             // Vẽ một camera trên màn hình
-            GUI.DrawTexture(screenRect, webCamTexture, ScaleMode.ScaleToFit);
+            GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
             // Đọc nội dung trên màn hình.
             try
             {
-                IBarcodeReader barcodeReader = new BarcodeReader();
-                // Giải mã khung hình hiện tại.
-                var result = barcodeReader.Decode(webCamTexture.GetPixels32(), webCamTexture.width, webCamTexture.height);
-                if (result != null)
+                if (scanning)
                 {
-                    Debug.Log("Dữ liệu giải mã được từ mã QR là: " +result.Text);
-                    PlayerPrefs.SetString("scan",result.Text);
-                    FindObjectOfType<ControllerHome>().ScanCheck();
-                    this.enabled = false;
+                    IBarcodeReader barcodeReader = new BarcodeReader();
+                    // Giải mã khung hình hiện tại.
+                    var result = barcodeReader.Decode(camTexture.GetPixels32(), camTexture.width, camTexture.height);
+                    if (result != null)
+                    {
+                        Debug.Log("Dữ liệu giải mã được từ mã QR là: " + result.Text);
+                        PlayerPrefs.SetString("scan", result.Text);
+                        FindObjectOfType<ControllerHome>().ScanCheck();
+                        scanning = false; // Dừng quét sau khi tìm thấy mã QR
+                        camTexture.Stop();
+                        enabled = false;
+                    }
                 }
             }
             catch (Exception ex) { Debug.LogWarning(ex.Message); }
         }
 
-       
+        public void Buttonclick()
+        {
+            camTexture.Stop();
+        }
+        
     }
 }

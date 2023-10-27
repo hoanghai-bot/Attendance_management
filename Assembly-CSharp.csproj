@@ -55,6 +55,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
      <Compile Include="Assets\Connect.cs" />
+     <Compile Include="Assets\main\Script\service\AttendanceTableManagement.cs" />
      <Compile Include="Assets\main\Script\service\InformationManagement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -76,15 +77,15 @@
      <Compile Include="Assets\main\Script\controller\ControllerInformation.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+     <Compile Include="Assets\main\Script\service\WorkdayManagement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\main\Script\service\ButtonFind.cs" />
+     <Compile Include="Assets\main\Script\controller\ControllerWorkday.cs" />
      <Compile Include="Assets\main\Script\service\CalendarManagement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
      <Compile Include="Assets\main\Script\controller\ControllerHome.cs" />
-     <Compile Include="Assets\main\Script\controller\ControllerManagement.cs" />
      <Compile Include="Assets\Firebase\spript\firestoremanager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
-     <Compile Include="Assets\main\Script\service\TableManagement.cs" />
      <Compile Include="Assets\main\Script\controller\ControllerSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\main\Script\service\ClickPanel.cs" />
      <Compile Include="Assets\main\Script\controller\ControllerHistory.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\main\Script\controller\ControllerAttendanceTable.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\main\Script\service\SceneSwitcher.cs" />
      <Folder Include="Assets" />
@@ -439,14 +441,14 @@
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:\puto\attendance app\Attendance\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
+     <Reference Include="zxing.unity">
+     <HintPath>D:\puto\attendance app\Attendance\Assets\main\dll\zxing.unity.dll</HintPath>
+     </Reference>
      <Reference Include="Firebase.Platform">
      <HintPath>D:\puto\attendance app\Attendance\Assets\Firebase\Plugins\Firebase.Platform.dll</HintPath>
      </Reference>
      <Reference Include="Google.MiniJson">
      <HintPath>D:\puto\attendance app\Attendance\Assets\Firebase\Plugins\Google.MiniJson.dll</HintPath>
-     </Reference>
-     <Reference Include="zxing.unity">
-     <HintPath>D:\puto\attendance app\Attendance\Assets\main\dll\zxing.unity.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.iOS.Extensions.Xcode">
      <HintPath>D:\Unity\Hub\Editor\2022.3.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

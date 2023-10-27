@@ -1,19 +1,19 @@
 <dependencies>
   <compile
-      roots="D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release">
+      roots="D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release">
     <dependency
-        name="D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
+        name="D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
         simpleName="Gradle:unityLibrary"/>
   </compile>
   <package
-      roots="D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release,__local_aars__:D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar,D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:FirebaseApp.androidlib::release">
+      roots="D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release,__local_aars__:D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar,D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:FirebaseApp.androidlib::release">
     <dependency
-        name="D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
+        name="D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
         simpleName="Gradle:unityLibrary"/>
     <dependency
-        name="__local_aars__:D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar"/>
+        name="__local_aars__:D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar"/>
     <dependency
-        name="D:\puto\attendance app\Attendance management\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:FirebaseApp.androidlib::release"
+        name="D:\puto\attendance app\Attendance\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:FirebaseApp.androidlib::release"
         simpleName="Gradle.unityLibrary:FirebaseApp.androidlib"/>
   </package>
 </dependencies>

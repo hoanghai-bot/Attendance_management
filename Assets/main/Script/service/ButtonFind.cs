@@ -17,7 +17,7 @@ namespace main.Script.service
 
         public async void DrawFind()
         {
-            Query query = db.Collection("user");
+            Query query = db.Collection("User");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {
