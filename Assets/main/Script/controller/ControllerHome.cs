@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Firebase.Firestore;
@@ -35,6 +36,10 @@ namespace main.Script.controller
 
         public async void ScanCheck()
         {
+            DocumentReference docref = db.Collection("User").Document(IDAcc);
+            DocumentSnapshot docsnapshot = await docref.GetSnapshotAsync();
+            Connect connect = docsnapshot.ConvertTo<Connect>();
+            
             Query query = db.Collection("User");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
@@ -44,6 +49,7 @@ namespace main.Script.controller
                 {
                     if (PlayerPrefs.GetString("scan").StartsWith(doc.Id) )
                     {
+                        
                         if (!IsIPInNetwork(GetDeviceIPAddress(),networkAddress,netmask))
                         {
                             errorNetwork.SetActive(true);
@@ -60,24 +66,30 @@ namespace main.Script.controller
                         }
                         else
                         {
-                            check = "chech out";
+                            check = "check out";
                             ChangeText(check,temp);
                         }
 
-                        if (check == PlayerPrefs.GetString("check"))
+                        if (check ==connect.check)
                         {
                             repeatError.SetActive(true);
                             return;
                         }
                         else
                         {
-                            PlayerPrefs.SetString("check",check);
-                            ScanUpdateCheckTime(temp,check);
-                            success.SetActive(true);
-                            Debug.Log("check thanh cong " + DateTime.Now.TimeOfDay);
+
+                            Dictionary<string, object> data = new Dictionary<string, object>()
+                            {
+                                { "check", check }
+                            };
+
+                            await db.Collection("User")
+                                .Document(IDAcc)
+                                .UpdateAsync(data);
+                            
+                            ScanUpdateCheckTime(temp,check,success);
                             return;
                         }
-                        
                         
                     }
                 }

@@ -17,6 +17,7 @@
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
+    <color name="staticSplashScreenBackgroundColor">#231F20</color>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>

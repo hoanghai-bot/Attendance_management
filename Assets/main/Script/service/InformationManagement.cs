@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Net;
+
 using Firebase.Firestore;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +21,7 @@ namespace main.Script.service
             Query query = db.Collection("Attendance")
                 .Document(document)
                 .Collection("data")
-                .OrderBy("timecheck");
+                .OrderByDescending("timecheck");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {

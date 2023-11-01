@@ -23,7 +23,7 @@ namespace main.Script.controller
             db = FirebaseFirestore.DefaultInstance;
             IDAcc = PlayerPrefs.GetString("id");
             Debug.Log(PlayerPrefs.GetString("id"));
-            Debug.Log(IDAcc);
+            // Debug.Log(IDAcc);
             
         }
 
@@ -105,7 +105,8 @@ namespace main.Script.controller
                 { "name", name },
                 {"address",address},
                 {"birth",bith},
-                {"permission","member"}
+                {"permission","member"},
+                {"check",""}
             };
             collection.AddAsync(data);
         }
@@ -122,6 +123,7 @@ namespace main.Script.controller
                 {"address",address},
                 {"birth",bith},
                 {"permission",mission}
+                
             };
             collection.UpdateAsync(data);
         }
@@ -167,11 +169,8 @@ namespace main.Script.controller
             return ipAddress;
         }
 
-        public async void ScanUpdateCheckTime(DateTime temp, string check)
+        public async void ScanUpdateCheckTime(DateTime temp, string check, GameObject success)
         {
-            
-            
-            
             DocumentReference doc = db.Collection("User")
                 .Document(PlayerPrefs.GetString("id"));
             DocumentSnapshot snapshot = await doc.GetSnapshotAsync();
@@ -192,6 +191,8 @@ namespace main.Script.controller
                 {"check",check}
             };
             await query.AddAsync(data);
+            
+            success.SetActive(true);
         }
 
         protected async Task<bool> CheckPermission(string temp)

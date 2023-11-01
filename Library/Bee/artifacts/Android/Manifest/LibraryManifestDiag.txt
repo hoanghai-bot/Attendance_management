@@ -1,11 +1,10 @@
-Using template 'D:/Unity/Hub/Editor/2022.3.5f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
+Using template 'D:/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
 
 android.hardware.vulkan.version was added because:
 	One of the graphics devices was Vulkan
 android.permission.INTERNET was added because:
 	System.Net.Sockets was present in:
 		Assembly-CSharp-FeaturesChecked.txt
-	Development player
 android.permission.CAMERA, android.hardware.camera (Auto Focus, Front) were added because:
 	UnityEngine.WebCamTexture was present in:
 		Assembly-CSharp-FeaturesChecked.txt

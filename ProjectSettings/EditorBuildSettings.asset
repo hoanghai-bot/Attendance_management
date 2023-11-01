@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/main/Scenes/CreateQR.unity
     guid: 92dc14363aae18b498c7776e25a61004
+  - enabled: 1
+    path: Assets/main/Scenes/CalculateWorkday.unity
+    guid: 67f2c4435733cdd4fa05bccc78ebbcae
   m_configObjects: {}
