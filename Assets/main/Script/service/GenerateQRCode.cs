@@ -10,6 +10,7 @@ public class GenerateQRCode : MonoBehaviour
 {
     public Text check;
     private DateTime time;
+    private string checkQR;
     
     private void Start()
     {
@@ -24,10 +25,12 @@ public class GenerateQRCode : MonoBehaviour
             || time.TimeOfDay >new TimeSpan(13,0,0) && time.TimeOfDay <  new TimeSpan(16,0,0))
         {
             check.text = "Check in";
+            checkQR = "Checkin";
         }
         else
         {
             check.text = "Check out";
+            checkQR = "Checkout";
         }
     }
     private IEnumerator WaitForMin()
@@ -63,7 +66,7 @@ public class GenerateQRCode : MonoBehaviour
 
     void OnGUI()
     {
-        Texture2D myQR = generateQR(PlayerPrefs.GetString("id") + " " + time.ToString());
+        Texture2D myQR = generateQR(checkQR + " " + time.ToString());
         GUI.DrawTexture(new Rect(100, 200, 512, 512), myQR, ScaleMode.ScaleToFit);
     }
 }

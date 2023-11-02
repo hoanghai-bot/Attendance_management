@@ -61,14 +61,14 @@ namespace main.Script.controller
         public void ClickButtonDay(Text number)
         {
             day = number.text;
-            FindObjectOfType<InformationManagement>().SeachInformation(day,month,year,db);
+            FindObjectOfType<InformationManagement>().SeachInformation(month,year,db);
         }
 
         private void UpdateEvent()
         {
             monthAndYear.text = "tháng "+month+" năm "+ year;
             FindObjectOfType<CalendarManagement>().DrawCalendar(month,year);
-            FindObjectOfType<InformationManagement>().SeachInformation(day,month,year,db);
+            FindObjectOfType<InformationManagement>().SeachInformation(month,year,db);
         }
 
         // public async void btnManageCheck()

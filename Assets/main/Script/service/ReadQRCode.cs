@@ -21,13 +21,14 @@ namespace main.Script.service
             RequestCameraPermission();
             screenRect = new Rect(0, 0, Screen.width, Screen.height);
             camTexture = new WebCamTexture();
+            
             camTexture.requestedHeight = Screen.height;
             camTexture.requestedWidth = Screen.width;
             if (camTexture != null)
             {
                 camTexture.Play();
                 rawImage.texture = camTexture;
-                rawImage.GetComponent<AspectRatioFitter>().aspectRatio = (float)camTexture.height / camTexture.width;
+                rawImage.GetComponent<AspectRatioFitter>().aspectRatio = (float)camTexture.width / camTexture.height;
             }
         }
         

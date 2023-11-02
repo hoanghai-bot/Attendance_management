@@ -13,7 +13,7 @@ namespace main.Script.service
         public GameObject prefab;
         
         
-        public async void SeachInformation(string day,int month,int year, FirebaseFirestore db)
+        public async void SeachInformation(int month,int year, FirebaseFirestore db)
         {
             DelInformation();
             string document = month + "-" + year;
@@ -32,7 +32,7 @@ namespace main.Script.service
                     {
                         var clone = Instantiate(prefab, transform);
                         clone.SetActive(true);
-                        string net;
+                        
                        
 
                         var temp = FindObjectsOfType<Button>()

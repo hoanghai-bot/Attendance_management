@@ -29,7 +29,7 @@ namespace main.Script.service
             {
                 var clone = Instantiate(prefab, transform);
                 clone.SetActive(true);
-                clone.GetComponentInChildren<Text>().text = day.ToString();
+                clone.GetComponentInChildren<Text>().text = day.ToString("00");
             }
         }
 

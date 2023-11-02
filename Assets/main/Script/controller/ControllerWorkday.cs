@@ -21,6 +21,7 @@ namespace main.Script.controller
             
             month = DateTime.Now.Month;
             year = DateTime.Now.Year;
+            monthAndYear.text = "tháng "+month+" năm "+ year;
         }
         public void PlusMonth()
         {

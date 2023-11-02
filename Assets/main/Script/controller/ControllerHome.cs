@@ -40,14 +40,15 @@ namespace main.Script.controller
             DocumentSnapshot docsnapshot = await docref.GetSnapshotAsync();
             Connect connect = docsnapshot.ConvertTo<Connect>();
             
-            Query query = db.Collection("User");
-            QuerySnapshot snapshot = await query.GetSnapshotAsync();
-            foreach (var doc in snapshot)
-            {
+            // Query query = db.Collection("User");
+            // QuerySnapshot snapshot = await query.GetSnapshotAsync();
+            // foreach (var doc in snapshot)
+            // {
                 
                 try
                 {
-                    if (PlayerPrefs.GetString("scan").StartsWith(doc.Id) )
+                    if (PlayerPrefs.GetString("scan").StartsWith("Checkin")
+                        || PlayerPrefs.GetString("scan").StartsWith("Checkout"))
                     {
                         
                         if (!IsIPInNetwork(GetDeviceIPAddress(),networkAddress,netmask))
@@ -58,8 +59,7 @@ namespace main.Script.controller
                         var text =FindLastPart(PlayerPrefs.GetString("scan"));
                         DateTime temp = DateTime.Parse(text);
                         string check;
-                        if (temp.TimeOfDay < new TimeSpan(11,0,0)
-                            || temp.TimeOfDay >new TimeSpan(13,0,0) && temp.TimeOfDay <  new TimeSpan(16,0,0))
+                        if (PlayerPrefs.GetString("scan").StartsWith("Checkin"))
                         {
                             check = "check in";
                             ChangeText(check,temp);
@@ -99,7 +99,7 @@ namespace main.Script.controller
                     return;
                     throw;
                 }
-            }
+            //}
             failure.SetActive(true);
             
         }
