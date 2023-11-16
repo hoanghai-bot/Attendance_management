@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Firebase.Firestore;
 using main.Script.service;
@@ -62,13 +63,7 @@ namespace main.Script.controller
             }
             else
             {
-                // if (password.text != confirm.text)
-                // {
-                //     accError.SetActive(false);
-                //     Debug.Log("Password has not been confirmed");
-                //     confirmError.SetActive(true);
-                // }
-                // else
+                
                 {
                     accError.SetActive(false);
                     confirmError.SetActive(false);
@@ -85,6 +80,29 @@ namespace main.Script.controller
         public void NoChangeUser()
         {
             InformationUser(id);
+        }
+
+        public async void ChangePass()
+        {
+            if (password.text != confirm.text)
+            {
+                accError.SetActive(false);
+                Debug.Log("Password has not been confirmed");
+                confirmError.SetActive(true);
+            }
+            else
+            {
+                confirmError.SetActive(false);
+                DocumentReference doc = db.Collection("User")
+                    .Document(id);
+                Dictionary<string, object> data = new Dictionary<string, object>()
+                {
+                    { "password", password.text }
+                };
+                await doc.UpdateAsync(data);
+            }
+
+            confirm.text = "";
         }
 
         private async void InformationUser(string id)
@@ -106,6 +124,11 @@ namespace main.Script.controller
 
             confirm.text = "";
         }
+
+        // public void ClickDelete()
+        // {
+        //     DeleteUser(id);
+        // }
 
         public void ListButton(GameObject obj)
         {

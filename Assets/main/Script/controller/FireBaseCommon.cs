@@ -54,6 +54,7 @@ namespace main.Script.controller
                 {
                     return false;
                 }
+                
             }
         
             Query qref = db.Collection("User");
@@ -206,6 +207,34 @@ namespace main.Script.controller
             return result;
         }
 
+        protected async void DeleteUser(string id)
+        {
+            DocumentReference doc = db.Collection("User")
+                .Document(id);
+            await doc.DeleteAsync();
+
+            Query Atten = db.Collection("Attendance");
+            QuerySnapshot AttenSnap = await Atten.GetSnapshotAsync();
+            foreach (var docID in AttenSnap)
+            {
+                Query query = db.Collection("Attendance")
+                    .Document(docID.Id)
+                    .Collection("data")
+                    .WhereEqualTo("id", id);
+
+                // Get the documents that match the query
+                QuerySnapshot snapshot = await query.GetSnapshotAsync();
+
+                // Delete each document that matches the query
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    await document.Reference.DeleteAsync();
+                }
+            }
+            
+            
+            
+        }
         
     
         // public async void ScanUpdateCheckOut()
