@@ -3,9 +3,6 @@ using Firebase.Firestore;
 using main.Script.controller;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
 
 namespace main.Script.service
 {
@@ -19,7 +16,7 @@ namespace main.Script.service
             base.Start();
         }
 
-        public async void DrawTableFullMon(int month, int year)
+        public async void DrawTableFullDay(int month, int year, int day)
         {
             DelTable();
             //Instantiate(pb, transform);
@@ -33,15 +30,24 @@ namespace main.Script.service
                     .Collection("data")
                     .OrderByDescending("timecheck");
                 QuerySnapshot snapshot = await query.GetSnapshotAsync();
+
+                
+                
                 foreach (var doc in snapshot)
                 {
                     Connect connect = doc.ConvertTo<Connect>();
-                    if (doc.Exists)
+                    if (connect.timecheck.Day == day)
                     {
+                        
+                        DocumentReference docuser = db.Collection("User")
+                            .Document(connect.id);
+                        DocumentSnapshot snapshotuser = await docuser.GetSnapshotAsync();
+                        Connect connectUser = snapshotuser.ConvertTo<Connect>();
+
                         var clone = Instantiate(prefab, transform);
                         clone.SetActive(true);
                         Text[] children = clone.GetComponentsInChildren<Text>();
-                        children[0].text = connect.name;
+                        children[0].text = connectUser.name;
                         children[1].text = ChangeTime(connect.timecheck);
                         if (connect.check == "check in")
                         {
@@ -58,7 +64,7 @@ namespace main.Script.service
             wait.SetActive(false);
         }
 
-        public async void DrawTableWithName(int month, int year, string name)
+        public async void DrawTableWithName(int month, int year,int day, string id,string Name)
         {
             DelTable();
             //Instantiate(pb, transform);
@@ -75,24 +81,22 @@ namespace main.Script.service
                 foreach (var doc in snapshot)
                 {
                     Connect connect = doc.ConvertTo<Connect>();
-                    if (name == connect.name)
+                    if (connect.id == id && connect.timecheck.Day == day)
                     {
-                        if (doc.Exists)
+                        var clone = Instantiate(prefab, transform);
+                        clone.SetActive(true);
+                        Text[] children = clone.GetComponentsInChildren<Text>();
+                        children[0].text = Name;
+                        children[1].text = ChangeTime(connect.timecheck);
+                        if (connect.check == "check in")
                         {
-                            var clone = Instantiate(prefab, transform);
-                            clone.SetActive(true);
-                            Text[] children = clone.GetComponentsInChildren<Text>();
-                            children[0].text = connect.name;
-                            children[1].text = ChangeTime(connect.timecheck);
-                            if (connect.check == "check in")
-                            {
-                                clone.GetComponent<Image>().color = Color.green;
-                            }
-                            else
-                            {
-                                clone.GetComponent<Image>().color = Color.yellow;
-                            }
+                            clone.GetComponent<Image>().color = Color.green;
                         }
+                        else
+                        {
+                            clone.GetComponent<Image>().color = Color.yellow;
+                        }
+
                     }
                 }
             //}

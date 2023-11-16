@@ -15,10 +15,10 @@ namespace main.Script.controller
         protected FirebaseFirestore db;
         protected void Start()
         {
-            Screen.autorotateToPortrait = false; // Không cho phép xoay màn hình dọc
-            Screen.autorotateToPortraitUpsideDown = false; // Không cho phép xoay màn hình dọc ngược
+            // Screen.autorotateToPortrait = false; // Không cho phép xoay màn hình dọc
+            // Screen.autorotateToPortraitUpsideDown = false; // Không cho phép xoay màn hình dọc ngược
             Screen.orientation = ScreenOrientation.Portrait; // Cố định màn hình ở chế độ dọc
-
+            
             
             db = FirebaseFirestore.DefaultInstance;
             IDAcc = PlayerPrefs.GetString("id");
@@ -39,10 +39,10 @@ namespace main.Script.controller
         //     connect = docsnap.ConvertTo<Connect>();
         // }
 
-        protected async Task<bool> ChenkAccount(string acc,string id)
+        protected async Task<bool> ChenkAccount(string acc,string id=null)
         {
             bool result = false;
-            if (PlayerPrefs.GetString("id")!="")
+            if (id!=null)
             {
                 DocumentReference doc = db.Collection("User")
                     .Document(id);
@@ -182,12 +182,9 @@ namespace main.Script.controller
             Dictionary<string, object> data = new Dictionary<string, object>()
             {
                 { "timecheck", temp },
-                {"name",connect.name},
-                {"phone", connect.account},
+                // {"name",connect.name},
                 {"id",PlayerPrefs.GetString("id")},
                 {"time",temp.ToString("dd/MM/yyyy")},
-                {"network",GetDeviceIPAddress()},
-                {"device",GetDeviceName()},
                 {"check",check}
             };
             await query.AddAsync(data);
@@ -208,6 +205,8 @@ namespace main.Script.controller
             }
             return result;
         }
+
+        
     
         // public async void ScanUpdateCheckOut()
         // {

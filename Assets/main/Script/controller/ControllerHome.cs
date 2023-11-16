@@ -29,7 +29,8 @@ namespace main.Script.controller
             base.Start();
             if (await CheckPermission("system"))
             {
-                SceneManager.LoadScene("HomeSystem");
+                GetComponent<ReadQRCode>().camTexture.Stop();
+                SceneManager.LoadScene("CreateQR");
             }
             
         }

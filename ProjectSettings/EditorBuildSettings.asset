@@ -9,30 +9,30 @@ EditorBuildSettings:
     path: Assets/main/Scenes/SignIn.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/main/Scenes/SignUp.unity
+    path: Assets/main/Scenes/ad/SignUp.unity
     guid: 1e9f300aaac54664289942d52a71257a
   - enabled: 1
-    path: Assets/main/Scenes/Home.unity
+    path: Assets/main/Scenes/member/Home.unity
     guid: 3381b0729d75eb747999871d61580a78
   - enabled: 1
-    path: Assets/main/Scenes/History.unity
+    path: Assets/main/Scenes/member/History.unity
     guid: 93e6f264d5f51c746b970ad5020f9b57
   - enabled: 1
-    path: Assets/main/Scenes/AttendanceTable.unity
+    path: Assets/main/Scenes/ad/AttendanceTable.unity
     guid: 566c88907eadac746a238a2820af7c1b
   - enabled: 1
-    path: Assets/main/Scenes/InformationMember.unity
+    path: Assets/main/Scenes/ad/InformationMember.unity
     guid: 2ad3a5776f6148e4fb049f496c5cbf87
   - enabled: 1
-    path: Assets/main/Scenes/HomeSystem.unity
-    guid: d4e51705ca7125444a8cb33efa2c1db7
-  - enabled: 1
-    path: Assets/main/Scenes/HomeManage.unity
+    path: Assets/main/Scenes/ad/HomeManage.unity
     guid: 7d2aec1159160c9499af22cebd20537f
   - enabled: 1
-    path: Assets/main/Scenes/CreateQR.unity
+    path: Assets/main/Scenes/system/CreateQR.unity
     guid: 92dc14363aae18b498c7776e25a61004
   - enabled: 1
-    path: Assets/main/Scenes/CalculateWorkday.unity
+    path: Assets/main/Scenes/ad/CalculateWorkday.unity
     guid: 67f2c4435733cdd4fa05bccc78ebbcae
+  - enabled: 1
+    path: Assets/main/Scenes/system/Exception.unity
+    guid: f39758c41aeae7a43a4442b3db39027d
   m_configObjects: {}

@@ -11,7 +11,7 @@ namespace main.Script.controller
         public Text monthAndYear;
         public int month;
         public int year;
-        public string day;
+        public int day;
         public GameObject btnManage;
         
         private async void Start()
@@ -19,7 +19,7 @@ namespace main.Script.controller
             base.Start();
             month = DateTime.Now.Month;
             year = DateTime.Now.Year;
-            day = DateTime.Now.Day.ToString();
+            day = DateTime.Now.Day;
             UpdateEvent();
             //btnManageCheck();
             if (await CheckPermission("admin"))
@@ -60,15 +60,15 @@ namespace main.Script.controller
 
         public void ClickButtonDay(Text number)
         {
-            day = number.text;
-            FindObjectOfType<InformationManagement>().SeachInformation(month,year,db);
+            day = Convert.ToInt32(number.text);
+            FindObjectOfType<InformationManagement>().SeachInformation(month,year,day,db);
         }
 
         private void UpdateEvent()
         {
             monthAndYear.text = "tháng "+month+" năm "+ year;
             FindObjectOfType<CalendarManagement>().DrawCalendar(month,year);
-            FindObjectOfType<InformationManagement>().SeachInformation(month,year,db);
+            FindObjectOfType<InformationManagement>().SeachInformation(month,year,day,db);
         }
 
         // public async void btnManageCheck()

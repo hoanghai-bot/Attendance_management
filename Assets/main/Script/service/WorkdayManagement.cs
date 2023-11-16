@@ -1,6 +1,7 @@
 using System;
 using Firebase.Firestore;
 using main.Script.controller;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,10 +10,11 @@ namespace main.Script.service
     public class WorkdayManagement : FireBaseCommon
     {
         public GameObject wait;
-        public Text wn;
-        public Text wd;
-        public Text late;
-        public Text lasttime;
+        // public Text wn;
+        // public Text wd;
+        // public Text late;
+        // public Text lasttime;
+        public GameObject prefab;
         
         private float workday;
         private int timelate;
@@ -23,71 +25,129 @@ namespace main.Script.service
             base.Start();
         }
 
-        public async void DrawReportWithName(int month, int year, string name)
+        public async void DrawReportWithName(int month, int year)
         {
             DelTable();
+            string id =null;
+            string str;
             string document = month + "-" + year;
+
+            Query userQuery = db.Collection("User");
+            QuerySnapshot userSnapshot = await userQuery.GetSnapshotAsync();
+            foreach (var useDoc in userSnapshot)
+            {
+                Connect userConnect = useDoc.ConvertTo<Connect>();
+                id = useDoc.Id;
+                str = userConnect.name;
+                
+                Query query = db.Collection("Attendance")
+                    .Document(document)
+                    .Collection("data")
+                    .WhereEqualTo("id",id)
+                    .OrderByDescending("timecheck");
+                QuerySnapshot snapshot = await query.GetSnapshotAsync();
+                
+                foreach (var doc in snapshot)
+                {
+                    Connect connect = doc.ConvertTo<Connect>();
+                    CalculateWork(connect);
+                }
+                WriteResults(str);
+                ResetCalculate();
+                wait.SetActive(false);
+            }
+            
+            // Query query = db.Collection("Attendance")
+            //     .Document(document)
+            //     .Collection("data")
+            //     .OrderByDescending("timecheck")
+            //     .OrderByDescending("id");
+            // QuerySnapshot snapshot = await query.GetSnapshotAsync();
+            //
+            //
+            // foreach (var doc in snapshot)
+            // {
+            //     Connect connect = doc.ConvertTo<Connect>();
+            //
+            //     if (id == null)
+            //     {
+            //         id = connect.id;
+            //     }
+            //     if (id ==connect.id)
+            //     {
+            //         CalculateWork(connect);
+            //     }
+            //     else
+            //     {
+            //         WriteResults(id);
+            //         id = connect.id;
+            //         ResetCalculate();
+            //         CalculateWork(connect);
+            //     }
+            //
+            // }
+            // WriteResults(id);
+            // wait.SetActive(false);
+        }
+
+        private void ResetCalculate()
+        {
             workday = 0;
             timelate = 0;
             sumlast = TimeSpan.Zero;
-            checkout= TimeSpan.Zero;
-            
-            Query query = db.Collection("Attendance")
-                .Document(document)
-                .Collection("data")
-                .OrderByDescending("timecheck");
-            QuerySnapshot snapshot = await query.GetSnapshotAsync();
+        }
 
-
-            foreach (var doc in snapshot)
+        private async void WriteResults(string id)
+        {
+            // DocumentReference docRef = db.Collection("User")
+            //     .Document(id);
+            // DocumentSnapshot docsnap = await docRef.GetSnapshotAsync();
+            // Connect c = docsnap.ConvertTo<Connect>();
+                    
+                    
+            var clone = Instantiate(prefab, transform);
+            clone.SetActive(true);
+            Text[] children = clone.GetComponentsInChildren<Text>();
+            children[0].text = id; //c.name;
+            children[1].text = workday.ToString();
+            children[2].text = timelate.ToString();
+            children[3].text = sumlast.ToString();
+        }
+        
+        private void CalculateWork(Connect connect)
+        {
+            TimeSpan temp = connect.timecheck.TimeOfDay;
+            if (connect.check == "check out")
             {
-                Connect connect = doc.ConvertTo<Connect>();
-                if (doc.Exists)
+                checkout = temp;
+            }
+            else if (connect.check == "check in")
+            {
+                if (ChangeTime(connect.timecheck) > new TimeSpan(13, 30, 0))
                 {
-                    if (name == connect.name)
-                    {
-                        TimeSpan temp = connect.timecheck.TimeOfDay;
-                        if (connect.check == "check out")
-                        {
-                            checkout = temp;
-                        }
-                        else if (connect.check == "check in")
-                        {
-                            if (ChangeTime(connect.timecheck) > new TimeSpan(13, 30, 0))
-                            {
-                                timelate++;
-                                sumlast += ChangeTime(connect.timecheck) - new TimeSpan(13, 30, 0);
-                            }
-                            else if(ChangeTime(connect.timecheck) > new TimeSpan(8, 30, 0)
-                                    && ChangeTime(connect.timecheck)< new TimeSpan(11,0,0))
-                            {
-                                timelate++;
-                                sumlast += ChangeTime(connect.timecheck) - new TimeSpan(8, 30, 0);
-                            }
+                    timelate++;
+                    sumlast = sumlast.Add(ChangeTime(connect.timecheck) - new TimeSpan(13, 30, 0));
+                }
+                else if (ChangeTime(connect.timecheck) > new TimeSpan(8, 30, 0)
+                         && ChangeTime(connect.timecheck) < new TimeSpan(11, 0, 0))
+                {
+                    timelate++;
+                    sumlast = sumlast.Add(ChangeTime(connect.timecheck) - new TimeSpan(8, 30, 0));
+                }
 
-                            TimeSpan calculate = checkout - temp;
+                TimeSpan calculate = checkout - temp;
 
-                            if (calculate > new TimeSpan(2, 0, 0)
-                                && calculate < new TimeSpan(5, 0, 0))
-                            {
-                                workday += 0.5f;
-                            }
+                if (calculate > new TimeSpan(2, 0, 0)
+                    && calculate < new TimeSpan(6, 0, 0))
+                {
+                    workday += 0.5f;
+                }
 
-                            if (calculate > new TimeSpan(5, 0, 0))
-                            {
-                                workday += 1;
-                            }
-                        }
-                    }
+                if (calculate > new TimeSpan(6, 0, 0))
+                {
+                    workday += 1;
                 }
             }
-
-            wn.text = (workday*2).ToString();
-            wd.text = workday.ToString();
-            late.text = timelate.ToString();
-            lasttime.text = sumlast.ToString();
-                
-            wait.SetActive(false);
         }
 
         private TimeSpan ChangeTime(DateTime time)
@@ -105,6 +165,10 @@ namespace main.Script.service
         private void DelTable()
         {
             wait.SetActive(true);
+            foreach (Transform i in transform)
+            {
+                Destroy(i.gameObject);
+            }
         }
     }
 }

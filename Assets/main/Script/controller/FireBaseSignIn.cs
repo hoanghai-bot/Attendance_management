@@ -25,7 +25,7 @@ namespace main.Script.controller
             {
                 if (await CheckPermission("system"))
                 {
-                    SceneManager.LoadScene("HomeSystem");
+                    SceneManager.LoadScene("CreateQR");
                 }
                 else
                 {
@@ -47,7 +47,7 @@ namespace main.Script.controller
                 Debug.Log("Mời nhập số điện thoại");
                 return;
             }
-            if (!await ChenkAccount(account.text,PlayerPrefs.GetString("id")))
+            if (!await ChenkAccount(account.text))
             {
                 accError.SetActive(true);
                 passError.SetActive(false);

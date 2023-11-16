@@ -13,7 +13,7 @@ namespace main.Script.controller
         public GameObject tableFind;
         public Text find;
 
-        private string name;
+        //private string name;
         
         private void Start()
         {
@@ -22,6 +22,7 @@ namespace main.Script.controller
             month = DateTime.Now.Month;
             year = DateTime.Now.Year;
             monthAndYear.text = "tháng "+month+" năm "+ year;
+            UpdateEvent();
         }
         public void PlusMonth()
         {
@@ -57,7 +58,7 @@ namespace main.Script.controller
         private void UpdateEvent()
         {
             monthAndYear.text = "tháng "+month+" năm "+ year;
-            FindObjectOfType<WorkdayManagement>().DrawReportWithName(month,year,name);
+            FindObjectOfType<WorkdayManagement>().DrawReportWithName(month,year);
         
         }
 
@@ -66,11 +67,11 @@ namespace main.Script.controller
             tableFind.SetActive(true);
         }
 
-        public void Find(Text temp)
+        public void Find(GameObject temp)
         {
-            find.text = temp.text;
-            name = temp.text;
-            FindObjectOfType<WorkdayManagement>().DrawReportWithName(month,year,name);
+            find.text = temp.GetComponentInChildren<Text>().text;
+            name = temp.name;
+            FindObjectOfType<WorkdayManagement>().DrawReportWithName(month,year);
         }
         public void AllFind(Text temp)
         {

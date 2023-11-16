@@ -13,9 +13,10 @@ namespace main.Script.service
         public GameObject prefab;
         
         
-        public async void SeachInformation(int month,int year, FirebaseFirestore db)
+        public async void SeachInformation(int month,int year,int day, FirebaseFirestore db)
         {
             DelInformation();
+            
             string document = month + "-" + year;
             
             Query query = db.Collection("Attendance")
@@ -26,26 +27,30 @@ namespace main.Script.service
             foreach (var doc in snapshot)
             {
                 Connect connect = doc.ConvertTo<Connect>();
-                if (doc.Exists)
+                if (connect.id == PlayerPrefs.GetString("id") )
                 {
-                    if (connect.id == PlayerPrefs.GetString("id"))
+                    var temp = FindObjectsOfType<Button>()
+                        .Where(x => x.GetComponentInChildren<Text>().text == connect.timecheck.ToString("dd"))
+                        .ToList().First();
+                    temp.image.color = Color.green;
+                    if (connect.timecheck.Day == day)
                     {
                         var clone = Instantiate(prefab, transform);
                         clone.SetActive(true);
-                        
-                       
-
-                        var temp = FindObjectsOfType<Button>()
-                            .Where(x => x.GetComponentInChildren<Text>().text == connect.timecheck.ToString("dd"))
-                            .ToList().First();
-                        temp.image.color = Color.green;
-
-                                clone.GetComponentInChildren<Text>().text =
-                            connect.check+ "\n" +
-                            "thời gian: " + ChangeTime(connect.timecheck) ;
-                        
+                    
+                        clone.GetComponentInChildren<Text>().text =
+                            connect.check + "\n" +
+                            "thời gian: " + ChangeTime(connect.timecheck);
                     }
                 }
+                if (month == DateTime.Now.Month && year == DateTime.Now.Year)
+                {
+                    var findButton = FindObjectsOfType<Button>()
+                        .Where(x => x.GetComponentInChildren<Text>().text == DateTime.Now.Day.ToString("00"))
+                        .ToList().First();
+                    findButton.image.color = new Color(0,1,1);
+                }
+
             }
             
         }

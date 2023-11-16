@@ -25,6 +25,7 @@ namespace main.Script.service
                 if (doc.Exists)
                 {
                     var clone = Instantiate(prefab, transform);
+                    clone.name = doc.Id;
                     clone.GetComponentInChildren<Text>().text = connect.name;
                 }
             }

@@ -1,4 +1,4 @@
-#Thu Nov 02 08:56:07 ICT 2023
+#Wed Nov 15 17:05:44 ICT 2023
 base.1=D\:\\puto\\attendance app\\Attendance\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.1=classes2.dex
 base.0=D\:\\puto\\attendance app\\Attendance\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex

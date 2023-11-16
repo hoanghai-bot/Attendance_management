@@ -52,7 +52,7 @@ namespace main.Script.controller
                 accError.SetActive(false);
             }
 
-            if (await ChenkAccount(account.text,IDAcc))
+            if (await ChenkAccount(account.text))
             {
                 textError.text = "Số điện thoại này đã được sử dụng";
                 accError.SetActive(true);

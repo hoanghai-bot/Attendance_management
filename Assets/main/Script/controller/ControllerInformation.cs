@@ -27,6 +27,7 @@ namespace main.Script.controller
         void Start()
         {
             base.Start();
+            
             InformationUser(PlayerPrefs.GetString("id"));
             id = PlayerPrefs.GetString("id");
         }
@@ -116,16 +117,15 @@ namespace main.Script.controller
             misionMember.text = temp;
         }
 
-        public async void ClickFindName(Text temp)
+        public async void ClickFindName(GameObject temp)
         {
             Query query = db.Collection("User");
             QuerySnapshot snapshot = await query.GetSnapshotAsync();
             foreach (var doc in snapshot)
             {
-                Connect connect = doc.ConvertTo<Connect>();
                 if (doc.Exists)
                 {
-                    if (temp.text == connect.name)
+                    if (temp.name == doc.Id)
                     {
                         id = doc.Id;
                         InformationUser(id);
