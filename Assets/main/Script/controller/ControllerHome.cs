@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Threading.Tasks;
 using Firebase.Firestore;
@@ -46,8 +47,8 @@ namespace main.Script.controller
             // foreach (var doc in snapshot)
             // {
                 
-                try
-                {
+                // try
+                // {
                     if (PlayerPrefs.GetString("scan").StartsWith("Checkin")
                         || PlayerPrefs.GetString("scan").StartsWith("Checkout"))
                     {
@@ -58,7 +59,7 @@ namespace main.Script.controller
                             return;
                         }
                         var text =FindLastPart(PlayerPrefs.GetString("scan"));
-                        DateTime temp = DateTime.Parse(text);
+                        DateTime temp = DateTime.ParseExact(text, "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);;
                         string check;
                         if (PlayerPrefs.GetString("scan").StartsWith("Checkin"))
                         {
@@ -93,13 +94,13 @@ namespace main.Script.controller
                         }
                         
                     }
-                }
-                catch (Exception ex)
-                {
-                    failure.SetActive(true);
-                    return;
-                    throw;
-                }
+                //}
+                // catch (Exception ex)
+                // {
+                //     failure.SetActive(true);
+                //     return;
+                //     throw;
+                // }
             //}
             failure.SetActive(true);
             
