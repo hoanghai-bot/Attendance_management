@@ -89,7 +89,7 @@ namespace main.Script.controller
             
                 Debug.Log("signup success");
                 SignInSuccess.SetActive(true);
-                PlayerPrefs.SetString("id", "");
+                
             }
         
         }
